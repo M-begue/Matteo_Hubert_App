@@ -1,14 +1,28 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Shell
     x:Class="Mattéo_Hubert_App.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Mattéo_Hubert_App"
-    Title="Mattéo_Hubert_App">
+    Title="Mattéo_Hubert_App"
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    Shell.TabBarBackgroundColor="White"
+    Shell.TabBarForegroundColor="DeepSkyBlue"
+    Shell.TabBarUnselectedColor="Gray"
+    Shell.TabBarTitleColor="DeepSkyBlue">
 
+    <TabBar>
+        <Tab Title="Accueil" Icon="home.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+        <Tab Title="Recherche" Icon="search.png">
+            <ShellContent ContentTemplate="{DataTemplate local:SearchPage}" />
+        </Tab>
+        <Tab Title="Favoris" Icon="star.png">
+            <ShellContent ContentTemplate="{DataTemplate local:FavoritePage}" />
+        </Tab>
+        <Tab Title="Profil" Icon="user.png">
+            <ShellContent ContentTemplate="{DataTemplate local:UserPage}" />
+        </Tab>
+    </TabBar>
 </Shell>

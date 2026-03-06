@@ -1,35 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Mattéo_Hubert_App.MainPage">
+             x:Class="Mattéo_Hubert_App.MainPage"
+             Title="Accueil">
 
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
             <Image
-                Source="dotnet_bot.png"
+                Source="rakai_reading.png"
                 HeightRequest="185"
                 Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a submarine number ten" />
+                SemanticProperties.Description="Rakai is reading a book for the first time of his life" />
 
             <Label
-                Text="Hello, World!"
+                Text="Bonjour la team"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
             <Label
-                Text="Welcome to &#10;.NET Multi-platform App UI"
+                Text="Bienvenue&#10;"
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
+                SemanticProperties.Description="Bienvenue sur notre première appli MAUI" />
         </VerticalStackLayout>
     </ScrollView>
 
