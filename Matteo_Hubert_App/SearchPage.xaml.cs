@@ -1,0 +1,9 @@
+namespace Matteo_Hubert_App;
+
+public partial class SearchPage : ContentPage
+{
+	public SearchPage()
+	{
+		InitializeComponent();
+	}
+}

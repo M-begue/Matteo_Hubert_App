@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Matteo_Hubert_App.GifPage"
+             Title="Animation">
+
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="20">
+        <Image Source="crashing_out.gif" 
+               IsAnimationPlaying="True" 
+               WidthRequest="300" />
+        
+        <Button Text="Retour à l'accueil" Clicked="OnBackClicked" />
+    </VerticalStackLayout>
+</ContentPage>

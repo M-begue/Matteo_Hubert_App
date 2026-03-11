@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Matteo_Hubert_App.MainPage"
+             Title="Accueil">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="25">
+            
+            <Label Text="Matteo Hubert App"
+                   Style="{StaticResource Headline}"
+                   HorizontalOptions="Center" />
+            
+            <Label Text="Bienvenue dans notre application de démonstration !"
+                   Style="{StaticResource SubHeadline}"
+                   HorizontalOptions="Center" />
+
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                <Image Grid.Column="0" 
+                       Source="im_all_ears.png" 
+                       HeightRequest="150" 
+                       Aspect="AspectFill" />
+                <Image Grid.Column="1" 
+                       Source="triple_t.png" 
+                       HeightRequest="150" 
+                       Aspect="AspectFill" />
+            </Grid>
+
+            <Button Text="Voir l'animation GIF"
+                    Clicked="OnGifButtonClicked"
+                    BackgroundColor="#512BD4"
+                    TextColor="White"
+                    CornerRadius="10" />
+
+            <Label Text="Carousel :" FontAttributes="Bold" />
+            <CarouselView HeightRequest="200">
+                <CarouselView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>does_he_know.png</x:String>
+                        <x:String>flight_is_high.png</x:String>
+                        <x:String>flight_what.png</x:String>
+                        <x:String>rakai_reading.png</x:String>
+                    </x:Array>
+                </CarouselView.ItemsSource>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="10" StrokeShape="RoundRectangle 10">
+                            <Image Source="{Binding .}" Aspect="AspectFill" />
+                        </Border>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
