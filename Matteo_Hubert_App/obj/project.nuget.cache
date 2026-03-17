@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "4u5EpbTF8I4=",
+  "dgSpecHash": "HKjK+ICA1gs=",
   "success": true,
   "projectFilePath": "C:\\Projet\\Matteo_Hubert_App\\Matteo_Hubert_App\\Matteo_Hubert_App.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\jeanj\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512",
     "C:\\Users\\jeanj\\.nuget\\packages\\googlegson\\2.13.1.1\\googlegson.2.13.1.1.nupkg.sha512",
     "C:\\Users\\jeanj\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.0\\microsoft.extensions.configuration.10.0.0.nupkg.sha512",
     "C:\\Users\\jeanj\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.0\\microsoft.extensions.configuration.abstractions.10.0.0.nupkg.sha512",

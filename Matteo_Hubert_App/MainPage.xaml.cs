@@ -7,9 +7,4 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 	}
-
-	private async void OnGifButtonClicked(object? sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new GifPage());
-    }
 }
