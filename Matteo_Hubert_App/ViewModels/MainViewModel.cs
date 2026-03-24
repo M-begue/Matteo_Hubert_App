@@ -45,4 +45,17 @@ public partial class MainViewModel : ObservableObject
     {
         await Shell.Current.GoToAsync(nameof(GifPage));
     }
+
+    [RelayCommand]
+    private async Task GoToDetails(Game selectedGame)
+    {
+        if (selectedGame == null) return;
+
+        var parameters = new Dictionary<string, object>
+        {
+            { "Game", selectedGame }
+        };
+
+        await Shell.Current.GoToAsync(nameof(DetailsPage), parameters);
+    }
 }

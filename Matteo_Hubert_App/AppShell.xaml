@@ -15,7 +15,7 @@
         <Tab Title="Accueil" Icon="home.png">
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
         </Tab>
-        <Tab Title="Recherche" Icon="search.png">
+        <Tab Title="API" Icon="search.png">
             <ShellContent ContentTemplate="{DataTemplate local:SearchPage}" />
         </Tab>
         <Tab Title="Favoris" Icon="star.png">

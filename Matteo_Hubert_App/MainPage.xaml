@@ -22,18 +22,21 @@
             <Button Text="Voir l'animation GIF" Command="{Binding OpenGifPageCommand}" 
                     BackgroundColor="#512BD4" TextColor="White" CornerRadius="10" />
 
-            <Label Text="Jeux Switch de l'API :" FontAttributes="Bold" />
 
-            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
-
-            <CarouselView ItemsSource="{Binding Games}" HeightRequest="200">
+            <Label Text="Carousel :" FontAttributes="Bold" />
+            <CarouselView HeightRequest="200">
+                <CarouselView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>does_he_know.png</x:String>
+                        <x:String>flight_is_high.png</x:String>
+                        <x:String>flight_what.png</x:String>
+                        <x:String>rakai_reading.png</x:String>
+                    </x:Array>
+                </CarouselView.ItemsSource>
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
-                        <Border Margin="10" StrokeShape="RoundRectangle 10" BackgroundColor="#F0F0F0">
-                            <VerticalStackLayout Padding="10" VerticalOptions="Center">
-                                <Label Text="{Binding Name}" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
-                                <Label Text="{Binding GenreDisplay}" FontSize="12" HorizontalOptions="Center"/>
-                            </VerticalStackLayout>
+                        <Border Margin="10" StrokeShape="RoundRectangle 10">
+                            <Image Source="{Binding .}" Aspect="AspectFill" />
                         </Border>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Matteo_Hubert_App</name>
+    </assembly>
+    <members>
+        <member name="T:Matteo_Hubert_App.ViewModels.DetailsViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:Matteo_Hubert_App.ViewModels.DetailsViewModel.CurrentGame">
+            <inheritdoc cref="F:Matteo_Hubert_App.ViewModels.DetailsViewModel._currentGame"/>
+        </member>
+        <member name="T:Matteo_Hubert_App.ViewModels.MainViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:Matteo_Hubert_App.ViewModels.MainViewModel.IsBusy">
+            <inheritdoc cref="F:Matteo_Hubert_App.ViewModels.MainViewModel._isBusy"/>
+        </member>
+        <member name="F:Matteo_Hubert_App.ViewModels.MainViewModel.loadGamesCommand">
+            <summary>The backing field for <see cref="P:Matteo_Hubert_App.ViewModels.MainViewModel.LoadGamesCommand"/>.</summary>
+        </member>
+        <member name="P:Matteo_Hubert_App.ViewModels.MainViewModel.LoadGamesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Matteo_Hubert_App.ViewModels.MainViewModel.LoadGamesAsync"/>.</summary>
+        </member>
+        <member name="F:Matteo_Hubert_App.ViewModels.MainViewModel.openGifPageCommand">
+            <summary>The backing field for <see cref="P:Matteo_Hubert_App.ViewModels.MainViewModel.OpenGifPageCommand"/>.</summary>
+        </member>
+        <member name="P:Matteo_Hubert_App.ViewModels.MainViewModel.OpenGifPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Matteo_Hubert_App.ViewModels.MainViewModel.OpenGifPage"/>.</summary>
+        </member>
+        <member name="F:Matteo_Hubert_App.ViewModels.MainViewModel.goToDetailsCommand">
+            <summary>The backing field for <see cref="P:Matteo_Hubert_App.ViewModels.MainViewModel.GoToDetailsCommand"/>.</summary>
+        </member>
+        <member name="P:Matteo_Hubert_App.ViewModels.MainViewModel.GoToDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Matteo_Hubert_App.ViewModels.MainViewModel.GoToDetails(Matteo_Hubert_App.Models.Game)"/>.</summary>
+        </member>
+        <member name="T:Matteo_Hubert_App.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentGame">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentGame" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentGame">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentGame" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+    </members>
+</doc>

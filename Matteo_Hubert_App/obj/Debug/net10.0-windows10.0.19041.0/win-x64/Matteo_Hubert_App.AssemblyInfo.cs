@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Matteo_Hubert_App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+e3fd95bee669231e1f59090bb567cb5dbe39308a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+7dba5b7da6040d5f983268e82a1ad4612ee2cda8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Matteo_Hubert_App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Matteo_Hubert_App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

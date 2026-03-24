@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using System.Text.Json;
 using System.Linq;
 
 namespace Matteo_Hubert_App.Models;
@@ -11,21 +12,48 @@ public class Game
     [JsonPropertyName("genre")]
     public object? Genre { get; set; }
 
-    [JsonPropertyName("releaseDate")]
-    public string ReleaseDate { get; set; } = string.Empty;
+    [JsonPropertyName("developers")]
+    public object? Developers { get; set; }
 
-    public string GenreDisplay
+    [JsonPropertyName("publishers")]
+    public object? Publishers { get; set; }
+
+    [JsonPropertyName("releaseDates")]
+    public object? ReleaseDates { get; set; }
+
+    public string ReleaseDateDisplay
     {
         get
         {
-            if (Genre == null) return "N/A";
+            if (ReleaseDates == null) return "N/A";
 
-            if (Genre is System.Text.Json.JsonElement element && element.ValueKind == System.Text.Json.JsonValueKind.Array)
+            if (ReleaseDates is JsonElement element && element.ValueKind == JsonValueKind.Object)
             {
-                var list = element.EnumerateArray().Select(x => x.GetString());
-                return string.Join(", ", list);
+                var dates = new List<string>();
+                foreach (var property in element.EnumerateObject())
+                {
+                    dates.Add($"{property.Name} : {property.Value}");
+                }
+                return string.Join(" | ", dates);
             }
-            return Genre.ToString() ?? "N/A";
+
+            return ReleaseDates.ToString() ?? "N/A";
         }
+    }
+
+    public string GenreDisplay => ChangementFormat(Genre);
+    public string DevelopersDisplay => ChangementFormat(Developers);
+    public string PublishersDisplay => ChangementFormat(Publishers);
+
+    private string ChangementFormat(object? data)
+    {
+        if (data == null) return "N/A";
+        
+        if (data is System.Text.Json.JsonElement element && element.ValueKind == System.Text.Json.JsonValueKind.Array)
+        {
+            return string.Join(", ", element.EnumerateArray().Select(x => x.GetString()));
+        }
+
+        return data.ToString() ?? "N/A";
     }
 }
