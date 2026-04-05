@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Matteo_Hubert_App.ViewModels"
+             x:Class="Matteo_Hubert_App.AddGamePage"
+             Title="Ajouter un jeu">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Label Text="Nouveau jeu" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <Entry Placeholder="Nom du jeu" Text="{Binding NewGameName}" />
+            <Entry Placeholder="Genre" Text="{Binding NewGameGenre}" />
+            <Entry Placeholder="Développeurs" Text="{Binding NewGameDev}" />
+            <Entry Placeholder="Éditeurs" Text="{Binding NewGamePublisher}" />
+            <Entry Placeholder="Date de sortie" Text="{Binding NewGameDate}" />
+
+            <Button Text="Enregistrer le jeu" 
+                    Command="{Binding AddCustomGameCommand}"
+                    BackgroundColor="#512BD4" 
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    HeightRequest="50" />
+            
+            <Label Text="Le jeu sera ajouté en haut de la liste." 
+                   FontSize="12" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

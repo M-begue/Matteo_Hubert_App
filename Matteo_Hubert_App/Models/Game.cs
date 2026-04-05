@@ -27,7 +27,7 @@ public class Game
         {
             if (ReleaseDates == null) return "N/A";
 
-            if (ReleaseDates is JsonElement element && element.ValueKind == JsonValueKind.Object)
+            if (ReleaseDates is System.Text.Json.JsonElement element && element.ValueKind == System.Text.Json.JsonValueKind.Object)
             {
                 var dates = new List<string>();
                 foreach (var property in element.EnumerateObject())
@@ -37,11 +37,16 @@ public class Game
                 return string.Join(" | ", dates);
             }
 
+            if (ReleaseDates is Dictionary<string, string> dict)
+            {
+                return string.Join(" | ", dict.Values);
+            }
+
             return ReleaseDates.ToString() ?? "N/A";
         }
     }
 
-    public string GenreDisplay => ChangementFormat(Genre);
+    public string GenreDisplay => ChangementFormat(Genre); 
     public string DevelopersDisplay => ChangementFormat(Developers);
     public string PublishersDisplay => ChangementFormat(Publishers);
 

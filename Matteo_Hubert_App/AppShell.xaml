@@ -18,8 +18,8 @@
         <Tab Title="API" Icon="search.png">
             <ShellContent ContentTemplate="{DataTemplate local:SearchPage}" />
         </Tab>
-        <Tab Title="Favoris" Icon="star.png">
-            <ShellContent ContentTemplate="{DataTemplate local:FavoritePage}" />
+        <Tab Title="Ajouter" Icon="add.png">
+            <ShellContent ContentTemplate="{DataTemplate local:AddGamePage}" />
         </Tab>
         <Tab Title="Profil" Icon="user.png">
             <ShellContent ContentTemplate="{DataTemplate local:UserPage}" />

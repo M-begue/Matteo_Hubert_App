@@ -6,10 +6,6 @@
              x:Class="Matteo_Hubert_App.SearchPage"
              Title="Liste des Jeux Switch">
 
-    <ContentPage.BindingContext>
-        <vm:MainViewModel />
-    </ContentPage.BindingContext>
-
     <Grid RowDefinitions="Auto, *">
         
         <ActivityIndicator Grid.Row="1"

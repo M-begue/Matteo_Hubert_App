@@ -13,26 +13,59 @@ public partial class MainViewModel : ObservableObject
     [ObservableProperty]
     private bool _isBusy;
 
-    public ObservableCollection<Game> Games { get; } = new();
+    [ObservableProperty]
+    public ObservableCollection<Game> _games = new();
+
+    [ObservableProperty] private string _newGameName = string.Empty;
+    [ObservableProperty] private string _newGameGenre = string.Empty;
+    [ObservableProperty] private string _newGameDev = string.Empty;
+    [ObservableProperty] private string _newGamePublisher = string.Empty;
+    [ObservableProperty] private string _newGameDate = string.Empty;
 
     public MainViewModel()
     {
-        LoadGamesCommand.Execute(null);
+        
+    }
+
+    [RelayCommand]
+    public async Task AddCustomGame()
+    {
+        if (string.IsNullOrWhiteSpace(NewGameName)) return;
+
+        var customGame = new Game
+        {
+            Name = NewGameName,
+            Genre = NewGameGenre,
+            Developers = NewGameDev,
+            Publishers = NewGamePublisher,
+            ReleaseDates = new Dictionary<string, string> { { "Saisie manuelle", NewGameDate } }
+        };
+
+        Games.Insert(0, customGame);
+
+        NewGameName = NewGameGenre = NewGameDev = NewGamePublisher = NewGameDate = string.Empty;
+
+        await Shell.Current.DisplayAlertAsync("Succès", "Jeu ajouté !", "OK");
+        await Shell.Current.GoToAsync(".."); 
     }
 
     [RelayCommand]
     private async Task LoadGamesAsync()
     {
-        if (IsBusy) return;
+        if (IsBusy || Games.Count > 0) return; 
 
         try
         {
             IsBusy = true;
-            var games = await _apiService.GetGamesAsync();
-            
-            Games.Clear();
-            foreach (var game in games)
+            var gamesFromApi = await _apiService.GetGamesAsync();
+            foreach (var game in gamesFromApi)
+            {
                 Games.Add(game);
+            }
+        }
+        catch (Exception ex)
+        {
+            await Shell.Current.DisplayAlertAsync("Erreur", "Problème de connexion", "OK", ex.Message);
         }
         finally
         {
