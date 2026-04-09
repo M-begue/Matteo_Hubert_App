@@ -23,6 +23,7 @@ public static class MauiProgram
 		builder.Services.AddSingleton<GifPage>();
 		builder.Services.AddSingleton<SearchPage>();
 		builder.Services.AddSingleton<AddGamePage>();
+		builder.Services.AddSingleton<SettingsPage>();
 
 		return builder.Build();
 	}

@@ -74,6 +74,18 @@ public partial class MainViewModel : ObservableObject
     }
 
     [RelayCommand]
+    private async Task ClearGames()
+    {
+        bool confirm = await Shell.Current.DisplayAlertAsync("Attention", "Voulez-vous vraiment vider la liste ?", "Oui", "Non");
+    
+        if (confirm)
+        {
+            Games.Clear();
+            await Shell.Current.DisplayAlertAsync("Info", "La liste a été vidée.", "OK");
+        }
+    }
+
+    [RelayCommand]
     private async Task OpenGifPage()
     {
         await Shell.Current.GoToAsync(nameof(GifPage));
