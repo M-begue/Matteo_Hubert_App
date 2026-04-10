@@ -21,7 +21,7 @@
         <Tab Title="Ajouter" Icon="add.png">
             <ShellContent ContentTemplate="{DataTemplate local:AddGamePage}" />
         </Tab>
-        <Tab Title="Settings" Icon="settings.png">
+        <Tab Title="Paramètres" Icon="settings.png">
             <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}" />
         </Tab>
     </TabBar>
